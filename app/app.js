@@ -33,9 +33,9 @@ var app = {
 }
 
 function initApp() {
-    let hiBtn = document.getElementById('btn1');
+    let hi_btn = document.getElementById('btn1');
 
-    hiBtn.addEventListener('click', function () {
+    hi_btn.addEventListener('click', function () {
         if (tg.MainButton.isVisible) {
             tg.MainButton.hide();
         } else {
