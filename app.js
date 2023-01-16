@@ -29,7 +29,14 @@ var app = {
     showStatus: function (text) {
         clearTimeout(app.statusTo);
         $('.js-status').text(text).addClass('shown');
-    }
+        if (!app.isClosed) {
+            app.statusTo = setTimeout(function () { app.hideStatus(); }, 2500);
+        }
+    },
+    hideStatus: function () {
+        clearTimeout(app.statusTo);
+        $('.js-status').removeClass('shown');
+    },
 }
 
 function initApp() {
